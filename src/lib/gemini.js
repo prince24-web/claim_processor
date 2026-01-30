@@ -6,7 +6,9 @@ if (!apiKey) {
     console.warn("GEMINI_API_KEY is missing. AI features will use mock data.");
 }
 
-const genAI = new GoogleGenerativeAI(apiKey || "mock_key");
+const genAI = new GoogleGenerativeAI(apiKey);
 
-export const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-export const visionModel = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
+// Using Gemini 1.5 Flash - faster and more cost-effective for these tasks
+export const model = genAI.getGenerativeModel({
+    model: "gemini-3-flash-preview" });
+export const visionModel = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
