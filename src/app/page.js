@@ -15,8 +15,11 @@ export default function Home() {
             <span className="text-xl font-bold tracking-tight">ClaimAI</span>
           </div>
           <nav className="flex items-center gap-4 sm:gap-6">
+            <Link href="/admin">
+              <Button variant="outline">Admin Dashboard</Button>
+            </Link>
             <Link href="/claim">
-              <Button>Start Request Link</Button>
+              <Button>Start Claim</Button>
             </Link>
           </nav>
         </div>
